@@ -20,7 +20,7 @@ This repository reflects the **final Lab 3 version**, which includes everything 
 At a high level, the renderer:
 
 - Samples points in the **complex plane** as candidate values for the Mandelbrot iteration. 
-- Iterates the standard Mandelbrot recurrence \( z_{n+1} = z_n^2 + c \) for each sample and determines whether it **escapes**.  
+- Iterates the standard Mandelbrot recurrence \($z_{n+1} = z_n^2 + c$) for each sample and determines whether it **escapes**.  
 - For escaping points, records the **orbit** (the sequence of complex values visited during iteration).  
 - Maps the orbit back onto the image plane, updating a **density/histogram** of how often each pixel is visited.  
 - Converts the final histogram into an image file, producing a Buddhabrot visualization of the Mandelbrot set. 
