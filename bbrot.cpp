@@ -20,6 +20,7 @@ int main(int argc, char **argv) {
   int max_iters = 1'000;
   int num_threads = std::thread::hardware_concurrency() ?
     std::thread::hardware_concurrency() : 1;
+  int point_info_queue_size = 100;
   
   vector<std::thread> vec_producer_threads;
   int ch;
@@ -85,7 +86,7 @@ int main(int argc, char **argv) {
   cerr << "# of Producer Threads: " << num_threads << endl;
 
   /* Init concurrent bounded queue with some upper bound (e.g., 100 items) */
-  ConcurrentBoundedQueue<SP_MandelbrotPointInfo> q(100);
+  ConcurrentBoundedQueue<SP_MandelbrotPointInfo> q(point_info_queue_size);
 
   /* Init image */
   Image img(image_size, image_size);
