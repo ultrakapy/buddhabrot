@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
   int max_iters = 1'000;
   int num_threads = std::thread::hardware_concurrency() ?
     std::thread::hardware_concurrency() : 1;
-  int point_info_queue_size = 100;
+  int point_info_queue_size = 200;
   
   vector<std::thread> vec_producer_threads;
   int ch;
